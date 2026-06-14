@@ -13,10 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.json({ status: 'ok', message: 'API CRUD de empresas' });
-});
-
 app.use('/api/empresas', empresaRoutes);
 
 app.use((req, res) => {
